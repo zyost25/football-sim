@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://by2km8ped3jh7"]
+
+[ext_resource type="Script" uid="uid://c6pqn0rbk3lp1" path="res://sim_screen.gd" id="1_5kisj"]
+
+[node name="SimScreen" type="CanvasLayer" unique_id=1761876045]
+script = ExtResource("1_5kisj")
+
+[node name="TeamName1" type="Label" parent="." unique_id=392643385]
+offset_left = 153.0
+offset_top = 442.0
+offset_right = 193.0
+offset_bottom = 465.0
+theme_override_font_sizes/font_size = 45
+text = "Team 1"
+
+[node name="TeamName2" type="Label" parent="." unique_id=1169401645]
+offset_left = 900.0
+offset_top = 442.0
+offset_right = 1057.0
+offset_bottom = 505.0
+theme_override_font_sizes/font_size = 45
+text = "Team 2"
+
+[node name="TeamScore1" type="Label" parent="." unique_id=1886835276]
+offset_left = 200.0
+offset_top = 300.0
+offset_right = 240.0
+offset_bottom = 363.0
+theme_override_font_sizes/font_size = 45
+text = "0"
+
+[node name="TeamScore2" type="Label" parent="." unique_id=1608159532]
+offset_left = 950.0
+offset_top = 300.0
+offset_right = 990.0
+offset_bottom = 363.0
+theme_override_font_sizes/font_size = 45
+text = "0"
+
+[node name="Button" type="Button" parent="." unique_id=773397673]
+offset_left = 550.0
+offset_top = 500.0
+offset_right = 626.0
+offset_bottom = 531.0
+rotation = 0.000706289
+theme_override_font_sizes/font_size = 32
+text = "Simulate"
+
+[connection signal="pressed" from="Button" to="." method="onButtonPressed"]

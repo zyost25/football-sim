@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bct0t1ndf1wfh"]
+
+[ext_resource type="PackedScene" uid="uid://by2km8ped3jh7" path="res://sim_screen.tscn" id="1_ig7tw"]
+
+[node name="Main" type="Node" unique_id=1292427132]
+
+[node name="SimScreen" parent="." unique_id=1761876045 instance=ExtResource("1_ig7tw")]
