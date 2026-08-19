@@ -5,45 +5,79 @@
 [node name="SimScreen" type="CanvasLayer" unique_id=1761876045]
 script = ExtResource("1_5kisj")
 
-[node name="TeamName1" type="Label" parent="." unique_id=392643385]
-offset_left = 153.0
-offset_top = 442.0
-offset_right = 193.0
-offset_bottom = 465.0
+[node name="Scoreboard1" type="VBoxContainer" parent="." unique_id=1818118432]
+offset_right = 450.0
+offset_bottom = 648.0
+
+[node name="TeamName1" type="Label" parent="Scoreboard1" unique_id=392643385]
+custom_minimum_size = Vector2(250, 100)
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme_override_font_sizes/font_size = 45
 text = "Team 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="TeamName2" type="Label" parent="." unique_id=1169401645]
-offset_left = 900.0
-offset_top = 442.0
-offset_right = 1057.0
-offset_bottom = 505.0
+[node name="TeamScore1" type="Label" parent="Scoreboard1" unique_id=1886835276]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "0"
+horizontal_alignment = 1
+
+[node name="Scoreboard2" type="VBoxContainer" parent="." unique_id=1083813460]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -450.0
+offset_bottom = 648.0
+grow_horizontal = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TeamName2" type="Label" parent="Scoreboard2" unique_id=1207579607]
+custom_minimum_size = Vector2(250, 100)
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme_override_font_sizes/font_size = 45
 text = "Team 2"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="TeamScore1" type="Label" parent="." unique_id=1886835276]
-offset_left = 200.0
-offset_top = 300.0
-offset_right = 240.0
-offset_bottom = 363.0
+[node name="TeamScore2" type="Label" parent="Scoreboard2" unique_id=265598646]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
 theme_override_font_sizes/font_size = 45
 text = "0"
+horizontal_alignment = 1
 
-[node name="TeamScore2" type="Label" parent="." unique_id=1608159532]
-offset_left = 950.0
-offset_top = 300.0
-offset_right = 990.0
-offset_bottom = 363.0
-theme_override_font_sizes/font_size = 45
-text = "0"
+[node name="ButtonContainer" type="VBoxContainer" parent="." unique_id=472132576]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -324.0
+offset_right = 225.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=773397673]
-offset_left = 550.0
-offset_top = 500.0
-offset_right = 626.0
-offset_bottom = 531.0
-rotation = 0.000706289
+[node name="Button" type="Button" parent="ButtonContainer" unique_id=773397673]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
 text = "Simulate"
 
-[connection signal="pressed" from="Button" to="." method="onButtonPressed"]
+[connection signal="pressed" from="ButtonContainer/Button" to="." method="onButtonPressed"]

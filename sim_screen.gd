@@ -12,6 +12,6 @@ func _process(delta: float) -> void:
 	
 	
 func onButtonPressed() -> void:
-	$TeamScore1.text = str(randi_range(1, 10))
-	$TeamScore2.text = str(randi_range(1, 10))
+	$Scoreboard1/TeamScore1.text = str(randi_range(1, 10))
+	$Scoreboard2/TeamScore2.text = str(randi_range(1, 10))
 	pass
